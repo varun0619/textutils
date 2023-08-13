@@ -1,15 +1,14 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-// import About from './components/About';
+import About from './components/About';
 import { useState } from 'react';
 import Alert from './components/Alert';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-  
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light') //whether dark mode enabled or not
@@ -25,19 +24,19 @@ function App() {
     }, 1500);
   }
 
-  const removeBodyClasses=()=>{
-    document.body.classList.remove('bg-light' )
-    document.body.classList.remove('bg-dark' )
-    document.body.classList.remove('bg-warning' )
-    document.body.classList.remove('bg-success' )
-    document.body.classList.remove('bg-danger' )
-   
+  const removeBodyClasses = () => {
+    document.body.classList.remove('bg-light')
+    document.body.classList.remove('bg-dark')
+    document.body.classList.remove('bg-warning')
+    document.body.classList.remove('bg-success')
+    document.body.classList.remove('bg-danger')
+
   }
 
   const toggleMode = (cls) => {
     removeBodyClasses()
     console.log(cls)
-    document.body.classList.add('bg-' +cls)
+    document.body.classList.add('bg-' + cls)
     if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = '#1F2245'
@@ -55,24 +54,19 @@ function App() {
 
   return (
     <>
-      {/* <Navbar title="TextUtils" aboutText="About TextUtils" /> */}
-      {/* <Navbar/>  IF WE WANT DEAFAULT CODE*/}
-      {/* <Router> */}
+      <Router>
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className="container my-3">
-          {/* <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route exact path="/">
-              <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
-            </Route>
-          </Switch> */}
+          <Routes>
+            <Route exact path="/about" element={<About />} />
+            {/* <Route exact path="/"  /> */}
+
+          </Routes>
           <TextForm showAlert={showAlert} heading="Try Textutils - Word Counter ,Character Counter,Remove Extra Spaces" mode={mode} />
-          {/* <About /> */}
         </div>
-      {/* </Router> */}
+
+      </Router>
 
 
     </>
