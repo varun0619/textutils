@@ -27,8 +27,8 @@ function App() {
   const removeBodyClasses = () => {
     document.body.classList.remove('bg-light')
     document.body.classList.remove('bg-dark')
-    document.body.classList.remove('bg-warning')
-    document.body.classList.remove('bg-success')
+    // document.body.classList.remove('bg-warning')
+    // document.body.classList.remove('bg-success')
     document.body.classList.remove('bg-danger')
 
   }
@@ -43,7 +43,7 @@ function App() {
       showAlert(" Dark mode has been enabled 🌙 ", " success ")
       // document.title = 'TextUtils - Dark Mode';
     }
-    else {
+    else  {
       setMode('light');
       document.body.style.backgroundColor = 'white'
       showAlert("Light mode has been enabled ", " success ")

@@ -23,9 +23,9 @@ export default function Navbar(props) {
                     <div className='d-flex'>
                         <div className='bg-primary roundex mx-2' onClick={()=>props.toggleMode ('primary')} style={{ height:'30px', width:'30px', cursor:'pointer', border:'1px solid black'}}></div>
                         <div className='bg-danger roundex mx-2' onClick={()=>props.toggleMode ('danger')} style={{ height:'30px', width:'30px', cursor:'pointer', border:'1px solid black'}}></div>
-                        <div className='bg-success roundex mx-2' onClick={()=>props.toggleMode ('success')} style={{ height:'30px', width:'30px', cursor:'pointer', border:'1px solid black'}}></div>
-                        <div className='bg-warning roundex mx-2' onClick={()=>props.toggleMode ('warning')} style={{ height:'30px', width:'30px', cursor:'pointer', border:'1px solid black'}}></div>
-                        <div className='bg-light roundex mx-2' onClick={()=>props.toggleMode ('light')} style={{ height:'30px', width:'30px', cursor:'pointer', border:'1px solid black'}}></div>
+                        {/* <div className='bg-success roundex mx-2' onClick={()=>props.toggleMode ('success')} style={{ height:'30px', width:'30px', cursor:'pointer', border:'1px solid black'}}></div> */}
+                        {/* <div className='bg-warning roundex mx-2' onClick={()=>props.toggleMode ('warning')} style={{ height:'30px', width:'30px', cursor:'pointer', border:'1px solid black'}}></div> */}
+                        {/* <div className='bg-light roundex mx-2' onClick={()=>props.toggleMode ('light')} style={{ height:'30px', width:'30px', cursor:'pointer', border:'1px solid black'}}></div> */}
                         <div className='bg-dark roundex mx-2' onClick={()=>props.toggleMode ('dark')} style={{ height:'30px', width:'30px', cursor:'pointer', border:'1px solid black'}}></div>
                     </div>
                     
